@@ -48,12 +48,12 @@ config:
         - DOMAIN-SUFFIX,biliapi.net
         - DOMAIN-SUFFIX,biliapi.com
         - DOMAIN-SUFFIX,bilibili.com
+        - DOMAIN-SUFFIX,akamaized.net
         - IP-CIDR,203.107.1.0/24
 
         # 哔哩哔哩 内容 & 静态资源 (直连优化)
         - DOMAIN-SUFFIX,api.vc.bilibili.com,DIRECT
         - DOMAIN-SUFFIX,data.bilibili.com,DIRECT
         - DOMAIN-SUFFIX,bilivideo.com,DIRECT
-        - DOMAIN-SUFFIX,akamaized.net,DIRECT
         - DOMAIN-SUFFIX,hdslb.com,DIRECT
         - DOMAIN-SUFFIX,szbdyd.com,DIRECT
