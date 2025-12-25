@@ -1,0 +1,47 @@
+# 针对部分网站显示IP归属地的分流规则
+# anti-ip-attribution parser.yaml v0.3.1 6000d7da2f90dddf0a0683e9637459e0d8e680db
+# https://github.com/SunsetMkt/anti-ip-attribution
+# 适用于Clash for Windows的配置文件预处理功能，详见https://docs.cfw.lbyczf.com/contents/parser.html
+parsers:
+- url: https://example.com/profile.yaml
+  yaml:
+    prepend-proxy-groups:
+    - name: "IP\u5F52\u5C5E\u5730"
+      proxies:
+      - "\U0001F530 \u9009\u62E9\u8282\u70B9"
+      - DIRECT
+      type: select
+    prepend-rules:
+    - DOMAIN,httpdns.bilivideo.com,REJECT
+    - DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
+    - IP-CIDR,47.101.175.206/32,REJECT
+    - IP-CIDR,47.100.123.169/32,REJECT
+    - IP-CIDR,120.46.169.234/32,REJECT
+    - IP-CIDR,121.36.72.124/32,REJECT
+    - IP-CIDR,116.63.10.135/32,REJECT
+    - IP-CIDR,122.9.7.134/32,REJECT
+    - IP-CIDR,117.185.228.108/32,REJECT
+    - IP-CIDR,117.144.238.29/32,REJECT
+    - IP-CIDR,122.9.13.79/32,REJECT
+    - IP-CIDR,122.9.15.129/32,REJECT
+    - IP-CIDR,101.91.140.224/32,REJECT
+    - IP-CIDR,101.91.140.124/32,REJECT
+    - IP-CIDR,114.116.215.110/32,REJECT
+    - IP-CIDR,116.63.10.31/32,REJECT
+    - IP-CIDR,112.64.218.119/32,REJECT
+    - IP-CIDR,112.65.200.117/32,REJECT
+    - "DOMAIN,api.bilibili.com,IP\u5F52\u5C5E\u5730"
+    - "DOMAIN,app.bilibili.com,IP\u5F52\u5C5E\u5730"
+    - "DOMAIN,api.live.bilibili.com,IP\u5F52\u5C5E\u5730"
+    - "DOMAIN,passport.bilibili.com,IP\u5F52\u5C5E\u5730"
+    - "DOMAIN,message.bilibili.com,IP\u5F52\u5C5E\u5730"
+    - "DOMAIN-SUFFIX,biliapi.net,IP\u5F52\u5C5E\u5730"
+    - "DOMAIN-SUFFIX,biliapi.com,IP\u5F52\u5C5E\u5730"
+    - "DOMAIN-SUFFIX,bilibili.com,IP\u5F52\u5C5E\u5730"
+    - "IP-CIDR,203.107.1.0/24,IP\u5F52\u5C5E\u5730"
+    - DOMAIN-SUFFIX,api.vc.bilibili.com,DIRECT
+    - DOMAIN-SUFFIX,data.bilibili.com,DIRECT
+    - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+    - DOMAIN-SUFFIX,akamaized.net,DIRECT
+    - DOMAIN-SUFFIX,hdslb.com,DIRECT
+    - DOMAIN-SUFFIX,szbdyd.com,DIRECT

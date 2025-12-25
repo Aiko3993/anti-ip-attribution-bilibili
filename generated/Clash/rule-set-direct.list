@@ -1,0 +1,10 @@
+# 针对部分网站显示IP归属地的分流规则
+# anti-ip-attribution rule-set-direct.list v0.3.1 6000d7da2f90dddf0a0683e9637459e0d8e680db
+# https://github.com/SunsetMkt/anti-ip-attribution
+# 适用于Clash RULE-SET
+DOMAIN-SUFFIX,api.vc.bilibili.com
+DOMAIN-SUFFIX,data.bilibili.com
+DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,akamaized.net
+DOMAIN-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,szbdyd.com
