@@ -1,5 +1,5 @@
 # 针对部分网站显示IP归属地的分流规则
-# anti-ip-attribution rule-set-proxy.list v0.3.1 6000d7da2f90dddf0a0683e9637459e0d8e680db
+# anti-ip-attribution rule-set-proxy.list v0.3.1 3465406a9c75a9e7a812204d010ba99895dd89f5
 # https://github.com/SunsetMkt/anti-ip-attribution
 # 适用于Clash RULE-SET
 DOMAIN,api.bilibili.com
@@ -10,4 +10,5 @@ DOMAIN,message.bilibili.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,akamaized.net
 IP-CIDR,203.107.1.0/24

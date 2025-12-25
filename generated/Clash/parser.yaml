@@ -1,5 +1,5 @@
 # 针对部分网站显示IP归属地的分流规则
-# anti-ip-attribution parser.yaml v0.3.1 6000d7da2f90dddf0a0683e9637459e0d8e680db
+# anti-ip-attribution parser.yaml v0.3.1 3465406a9c75a9e7a812204d010ba99895dd89f5
 # https://github.com/SunsetMkt/anti-ip-attribution
 # 适用于Clash for Windows的配置文件预处理功能，详见https://docs.cfw.lbyczf.com/contents/parser.html
 parsers:
@@ -38,10 +38,10 @@ parsers:
     - "DOMAIN-SUFFIX,biliapi.net,IP\u5F52\u5C5E\u5730"
     - "DOMAIN-SUFFIX,biliapi.com,IP\u5F52\u5C5E\u5730"
     - "DOMAIN-SUFFIX,bilibili.com,IP\u5F52\u5C5E\u5730"
+    - "DOMAIN-SUFFIX,akamaized.net,IP\u5F52\u5C5E\u5730"
     - "IP-CIDR,203.107.1.0/24,IP\u5F52\u5C5E\u5730"
     - DOMAIN-SUFFIX,api.vc.bilibili.com,DIRECT
     - DOMAIN-SUFFIX,data.bilibili.com,DIRECT
     - DOMAIN-SUFFIX,bilivideo.com,DIRECT
-    - DOMAIN-SUFFIX,akamaized.net,DIRECT
     - DOMAIN-SUFFIX,hdslb.com,DIRECT
     - DOMAIN-SUFFIX,szbdyd.com,DIRECT
