@@ -1,0 +1,29 @@
+name: 自动生成配置文件
+
+on:
+    push:
+        branches: [master, main]
+
+jobs:
+    build:
+        permissions: # Job-level permissions configuration starts here
+            contents: write # 'write' access to repository contents
+            pull-requests: write # 'write' access to pull requests
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+            - name: 自动生成配置文件
+              run: |
+                  pip3 install -r requirements.txt
+                  python3 generate.py
+            - name: 提交更改
+              run: |
+                  git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  git config --local user.name "github-actions[bot]"
+                  git add .
+                  git commit -m "自动生成配置文件" -a
+            - name: 推送更改
+              run: |
+                  git push

@@ -1,0 +1,5 @@
+# 针对部分网站显示IP归属地的分流规则
+# anti-ip-attribution ip/proxy.list v0.3.1 a4346723eee6e5d0b63a89c6d37a140544756bad
+# https://github.com/SunsetMkt/anti-ip-attribution
+# IP类规则 (IP) (PROXY)
+IP-CIDR,203.107.1.0/24
